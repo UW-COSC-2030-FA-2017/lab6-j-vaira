@@ -1,3 +1,4 @@
+//Jasmine Vaira 10/23/17
 // SortedDriver.cpp
 
 // tom bailey   1445  25 mar 2014
@@ -5,6 +6,7 @@
 //   process the sorted sequences.
 
 
+#include "stdafx.h"
 #include "RandomUtilities.h"
 #include "ContainerPrinting.h"
 #include "winTimer.h"
@@ -63,7 +65,31 @@ getWords(size_t numWords, size_t wordLength, string alphabet)
 double
 mostIsolated(vector<double> & number)
 {
-	// STUB  STUB  STUB
+	double nNeighbor;
+	double fNeighbor;
+	double mIso = number.front();
+
+	for (u_int i = 0; i < number.size(); i++)
+	{
+		if (number.at(i) == 0)
+		{
+			nNeighbor = fNeighbor;
+		}
+		else if (number.at(i) == number.back())
+		{
+			fNeighbor = nNeighbor;
+		}
+		else
+		{
+			nNeighbor = number.at(i) - number.at(i - 1);
+			fNeighbor = number.at(i + 1) - number.at(i);
+		}
+		if (nNeighbor >= fNeighbor)
+		{
+			mIso = number.at(i);
+		}
+	}
+
 	return -123.456;
 }
 
