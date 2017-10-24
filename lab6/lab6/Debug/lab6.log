@@ -1,1 +1,3 @@
-﻿LINK : fatal error LNK1104: cannot open file 'H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.exe'
+﻿  SortedDriver.cpp
+  lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.exe
+  lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.pdb (Partial PDB)

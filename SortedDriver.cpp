@@ -65,24 +65,24 @@ getWords(size_t numWords, size_t wordLength, string alphabet)
 double
 mostIsolated(vector<double> & number)
 {
-	double nNeighbor;
-	double fNeighbor;
+	double nNeighbor = 0;
+	double fNeighbor = 0;
 	double mIso = number.front();
 
 	for (u_int i = 0; i < number.size(); i++)
 	{
-		if (number.at(i) == 0)
-		{
-			nNeighbor = fNeighbor;
-		}
-		else if (number.at(i) == number.back())
-		{
-			fNeighbor = nNeighbor;
-		}
-		else
+		if (i != 0 && number.at(i) != number.back())
 		{
 			nNeighbor = number.at(i) - number.at(i - 1);
 			fNeighbor = number.at(i + 1) - number.at(i);
+		}
+		if (i == 0)
+		{
+			nNeighbor = fNeighbor;
+		}
+		if (number.at(i) == number.back())
+		{
+			fNeighbor = nNeighbor;
 		}
 		if (nNeighbor >= fNeighbor)
 		{
@@ -90,7 +90,7 @@ mostIsolated(vector<double> & number)
 		}
 	}
 
-	return -123.456;
+	return mIso;
 }
 
 
