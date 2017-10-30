@@ -65,29 +65,36 @@ getWords(size_t numWords, size_t wordLength, string alphabet)
 double
 mostIsolated(vector<double> & number)
 {
-	double nNeighbor = 0;
-	double fNeighbor = 0;
-	double mIso = number.front();
+	double lNeighbor = 0;	//distance from left neighbor
+	double rNeighbor = 0;	//distance from right neighbor
+	double nDistance = 0;	//distance from nearest neighbor
+	double lastnDistance = 0;	//previous element's distance from nearest neighbor
+	double mIso = number.front();	//most isolated number
 
 	for (u_int i = 0; i < number.size(); i++)
 	{
-		if (i != 0 && number.at(i) != number.back())
+		
+		if (i == 0)	//case for first element in vector
 		{
-			nNeighbor = number.at(i) - number.at(i - 1);
-			fNeighbor = number.at(i + 1) - number.at(i);
+			lNeighbor = 0;	//there is no left neighbor so we just set it to 0
+			rNeighbor = abs(number.at(i) + number.at(i + 1));	//compute distance from right neighbor
 		}
-		if (i == 0)
+		else if (number.at(i) == number.back()) //case for last element in vector
 		{
-			nNeighbor = fNeighbor;
+			lNeighbor = abs(number.at(i) - number.at(i - 1));	//compute distance from left neighbor
+			rNeighbor = 0;	//there is no right neighbor so we just set it to 0
 		}
-		if (number.at(i) == number.back())
+		else	//for all items except the first and last items
 		{
-			fNeighbor = nNeighbor;
+			lNeighbor = abs(number.at(i) - number.at(i - 1));	//compute distance from left neighbor
+			rNeighbor = abs(number.at(i) + number.at(i + 1));	//compute distance from right neighbor
 		}
-		if (nNeighbor >= fNeighbor)
+		nDistance = min(lNeighbor, rNeighbor);	//compute distance from nearest neighbor
+		if (nDistance >= lastnDistance)
 		{
 			mIso = number.at(i);
 		}
+		lastnDistance = nDistance;
 	}
 
 	return mIso;
