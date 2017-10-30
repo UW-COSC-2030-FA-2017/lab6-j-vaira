@@ -108,26 +108,15 @@ int
 unmatched(list<string> & A, list<string> & B)
 {
 	int numDif = 0;		//number of words in A that don't occur in B
-	int numSame = 0;	//number of words in A that also occur in B
-	A.front();	//start at front of A
-	B.front();	//start at front of B
-	while (A.empty() == FALSE)	//while A not empty
+	while (A.empty() != FALSE && B.empty() != FALSE)
 	{
-		while (B.empty() == FALSE)	//while B not empty
+		if (A.front() != B.front())
 		{
-			if (A.back() != B.back())
-			{
-				numDif++;	//increment different counter
-			}
-			else if (A.back() == B.back())
-			{
-				numSame++;	//increment same counter
-			}
-			B.pop_back();	//remove last element of B
+			numDif = numDif + 1;
 		}
-		A.pop_back();	//remove last element of B
+		A.pop_front();
+		B.pop_front();
 	}
-	numDif = abs(numSame - numDif);	//compute difference
 	return numDif;	//return number of words occurring in A but not B
 }
 
