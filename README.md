@@ -6,3 +6,4 @@ lab6-j-vaira created by GitHub Classroom
 *lab4
 *http://www.cplusplus.com/reference/cmath/abs/
 *http://www.cplusplus.com/reference/algorithm/min/
+*http://www.cplusplus.com/reference/list/list/

@@ -1,3 +1,5 @@
 ﻿  SortedDriver.cpp
+h:\github\lab6-j-vaira\sorteddriver.cpp(112): warning C4018: '<': signed/unsigned mismatch
+h:\github\lab6-j-vaira\sorteddriver.cpp(114): warning C4018: '<': signed/unsigned mismatch
   lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.exe
   lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.pdb (Partial PDB)
