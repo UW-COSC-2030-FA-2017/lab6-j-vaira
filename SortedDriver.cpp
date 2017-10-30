@@ -107,21 +107,27 @@ mostIsolated(vector<double> & number)
 int
 unmatched(list<string> & A, list<string> & B)
 {
-	int numDif = 0;	// number of words in A that don't occur in B
+	int numDif = 0;		//number of words in A that don't occur in B
+	int numSame = 0;	//number of words in A that also occur in B
 	A.front();	//start at front of A
 	B.front();	//start at front of B
-	while (A.back == FALSE)	//while not at end of list A
+	while (A.empty() == FALSE)	//while A not empty
 	{
-		while (B.back == FALSE)	//while not at end of list B
+		while (B.empty() == FALSE)	//while B not empty
 		{
-			if (A._Get_data != B._Get_data)
+			if (A.back() != B.back())
 			{
-				numDif++;
+				numDif++;	//increment different counter
 			}
-			B._Nextnode;	//move to next element of B
+			else if (A.back() == B.back())
+			{
+				numSame++;	//increment same counter
+			}
+			B.pop_back();	//remove last element of B
 		}
-		A._Nextnode;	//move to next element of A
+		A.pop_back();	//remove last element of B
 	}
+	numDif = abs(numSame - numDif);	//compute difference
 	return numDif;	//return number of words occurring in A but not B
 }
 

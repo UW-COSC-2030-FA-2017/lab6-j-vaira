@@ -1,32 +1,3 @@
 ﻿  SortedDriver.cpp
-h:\github\lab6-j-vaira\sorteddriver.cpp(113): error C3867: 'std::list<std::string,std::allocator<_Ty>>::back': non-standard syntax; use '&' to create a pointer to member
-          with
-          [
-              _Ty=std::string
-          ]
-h:\github\lab6-j-vaira\sorteddriver.cpp(115): error C3867: 'std::list<std::string,std::allocator<_Ty>>::back': non-standard syntax; use '&' to create a pointer to member
-          with
-          [
-              _Ty=std::string
-          ]
-h:\github\lab6-j-vaira\sorteddriver.cpp(117): error C3867: 'std::_List_alloc<std::_List_base_types<_Ty,_Alloc>>::_Get_data': non-standard syntax; use '&' to create a pointer to member
-          with
-          [
-              _Ty=std::string,
-              _Alloc=std::allocator<std::string>
-          ]
-h:\github\lab6-j-vaira\sorteddriver.cpp(117): error C2568: '!=': unable to resolve function overload
-  h:\github\lab6-j-vaira\sorteddriver.cpp(117): note: could be 'const std::_List_val<std::_List_simple_types<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>> &std::_List_alloc<std::_List_base_types<_Ty,_Alloc>>::_Get_data(void) noexcept const'
-          with
-          [
-              _Ty=std::string,
-              _Alloc=std::allocator<std::string>
-          ]
-  h:\github\lab6-j-vaira\sorteddriver.cpp(117): note: or       'std::_List_val<std::_List_simple_types<std::basic_string<char,std::char_traits<char>,std::allocator<char>>>> &std::_List_alloc<std::_List_base_types<_Ty,_Alloc>>::_Get_data(void) noexcept'
-          with
-          [
-              _Ty=std::string,
-              _Alloc=std::allocator<std::string>
-          ]
-h:\github\lab6-j-vaira\sorteddriver.cpp(121): warning C4551: function call missing argument list
-h:\github\lab6-j-vaira\sorteddriver.cpp(123): warning C4551: function call missing argument list
+  lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.exe
+  lab6.vcxproj -> H:\GitHub\lab6-j-vaira\lab6\Debug\lab6.pdb (Partial PDB)
