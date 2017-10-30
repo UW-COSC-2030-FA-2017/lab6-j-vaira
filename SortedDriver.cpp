@@ -90,7 +90,7 @@ mostIsolated(vector<double> & number)
 			rNeighbor = abs(number.at(i) + number.at(i + 1));	//compute distance from right neighbor
 		}
 		nDistance = min(lNeighbor, rNeighbor);	//compute distance from nearest neighbor
-		if (nDistance >= lastnDistance)
+		if (nDistance > lastnDistance)
 		{
 			mIso = number.at(i);
 		}
